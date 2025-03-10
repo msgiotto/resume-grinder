@@ -1,5 +1,5 @@
 export enum ExperienceTypeEnum {
     DEFAULT = "DEFAULT",
-    PROJECT = "PROJECT",
-    RECURRENCE = "RECURRENCE",
+    PROJECT = "PROJECT"
+    // Add more types here when extending the BaseExperience class
   }
