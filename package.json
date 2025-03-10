@@ -1,7 +1,7 @@
 {
   "name": "resumeown",
   "version": "1.0.0",
-  "description": "ResumeOwn - Own your work experience",
+  "description": "ResumeOwn Application",
   "author": "Marcio Saragiotto",
   "license": "MIT",
   "main": "src/app.ts",

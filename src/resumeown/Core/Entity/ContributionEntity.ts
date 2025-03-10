@@ -1,25 +1,25 @@
-import { ExperienceTypeEnum } from "./ValueObject/ExperienceTypeEnum";
+import { ContributionTypeEnum } from "./ValueObject/ContributionTypeEnum";
 import { ModifierListObject } from "./ValueObject/ModifierListObject";
 
-export class BaseExpRegEntity {
-    private type: ExperienceTypeEnum = ExperienceTypeEnum.DEFAULT;
+export class ContributionEntity {
+    private type: ContributionTypeEnum = ContributionTypeEnum.DEFAULT;
     private description: string = "";
     private modifierList: ModifierListObject;
     
-    constructor(type: ExperienceTypeEnum, description: string, modifierList: string[]) {
+    constructor(type: ContributionTypeEnum, description: string, modifierList: string[]) {
         this.setType(type);
         this.setDescription(description);
         this.modifierList = new ModifierListObject(modifierList);
     }
     
-    public setType(type: ExperienceTypeEnum): void {
+    public setType(type: ContributionTypeEnum): void {
         if (type === null) {
-            throw new Error('Type cannot be null');
+            throw new Error('Contribution Type cannot be null');
         }
         this.type = type;
     }   
 
-    public getType(): ExperienceTypeEnum {
+    public getType(): ContributionTypeEnum {
         return this.type;
     }
 
@@ -36,14 +36,14 @@ export class BaseExpRegEntity {
 
     public addModifierToExp(modifier: string): void {
         if (modifier === '' || modifier === null) {
-            throw new Error('Modifier cannot be empty');
+            throw new Error('Contribution Modifier cannot be empty');
         }
         this.modifierList.addModifier(modifier);
     }
     
     public removeModifierFromExp(modifier: string): void {
         if (modifier === '' || modifier === null) {
-            throw new Error('Modifier cannot be empty');
+            throw new Error('Contribution Modifier cannot be empty');
         }
         this.modifierList.removeModifier(modifier);
     }
