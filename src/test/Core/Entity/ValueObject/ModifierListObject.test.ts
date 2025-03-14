@@ -1,4 +1,4 @@
-import { ModifierListObject } from "../../../../resumeown/Core/Entity/ValueObject/ModifierListObject";
+import { ModifierListObject } from "../../../../resumegrinder/Core/Entity/ValueObject/ModifierListObject";
 
 describe('ModifierListObject', () => {
     it('should initialize with a list of modifiers', () => {
