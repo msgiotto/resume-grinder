@@ -1,5 +1,4 @@
-import { ContributionEntity } from "../../../resumeown/Core/Entity/ContributionEntity";
-import { ContributionTypeEnum } from "../../../resumeown/Core/Entity/ValueObject/ContributionTypeEnum";
+import { ContributionEntity, ContributionTypeEnum } from "../../../resumeown/Core/Entity/ContributionEntity";
 
 describe('ContributionEntity', () => {
     it('should initialize with type, description, and modifier list', () => {
