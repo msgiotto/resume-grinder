@@ -1,4 +1,4 @@
-# Resume Grinder
+# Resume reaper
 
 Open Source Solution for Resume Building, Job Tracking, and Performance Management.
 

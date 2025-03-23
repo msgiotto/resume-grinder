@@ -12,7 +12,12 @@ export class ModifierListObject {
         if (modifier === '' || modifier === null) {
             throw new Error('Modifier cannot be empty');
         }
-        modifier = modifier.replace(/#/g, '').toLowerCase();
+        const re_multiple = /[\s\n]/g;
+        if (modifier.match(re_multiple)) {
+            throw new Error('Multiple words are not allowed in the modifier');
+        }
+        const re_replacement = /[^a-zA-Z0-9-]/g;
+        modifier = modifier.replace(re_replacement, '').toLowerCase();
         if (!this.modifierList.includes(modifier)) {
             this.modifierList.push(modifier);
         }
