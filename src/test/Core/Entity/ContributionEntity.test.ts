@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import { ContributionEntity, ContributionTypeEnum } from "../../../resumegrinder/Core/Entity/ContributionEntity";
+import { ContributionEntity, ContributionTypeEnum } from "../../../resumereaper/Core/Entity/ContributionEntity";
 
 describe('ContributionEntity', () => {
     it('should initialize with type, description, and modifier list', () => {

@@ -1,7 +1,7 @@
 {
-  "name": "resumegrinder",
+  "name": "resumereaper",
   "version": "1.0.0",
-  "description": "Resume Grinder Application",
+  "description": "Resume reaper Application",
   "author": "Marcio Saragiotto",
   "license": "MIT",
   "main": "src/app.ts",

@@ -1,4 +1,4 @@
-import { PositionEntity, LocationTypeEnum, ContractTypeEnum, EmploymentTypeEnum } from "../../../resumegrinder/Core/Entity/PositionEntity";
+import { PositionEntity, LocationTypeEnum, ContractTypeEnum, EmploymentTypeEnum } from "../../../resumereaper/Core/Entity/PositionEntity";
 
 describe('PositionEntity', () => {
 
