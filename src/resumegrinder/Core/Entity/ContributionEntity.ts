@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import { ModifierListObject } from "./ValueObject/ModifierListObject";
 
 export enum ContributionTypeEnum {
@@ -13,11 +14,14 @@ export enum ContributionTypeEnum {
   }
 
 export class ContributionEntity {
+    private id: string;
     private type: ContributionTypeEnum = ContributionTypeEnum.DEFAULT;
     private description: string = "";
     private modifierList: ModifierListObject;
+
     
     constructor(type: ContributionTypeEnum, description: string, modifierList: string[]) {
+        this.id = uuidv4();
         this.setType(type);
         this.setDescription(description);
         this.modifierList = new ModifierListObject(modifierList);
@@ -36,9 +40,10 @@ export class ContributionEntity {
 
     public setDescription(description: string): void {
         if (description === '' || description === null) {
-            throw new Error('Description cannot be empty');
+            throw new Error('Contribution description cannot be empty');
         }
-        this.description = description;
+        const re = /[^a-zA-Z0-9\s.,:;'"()!?-]/g;
+        this.description = description.replace(re, '');
     }
     
     public getDescription(): string {
@@ -61,6 +66,10 @@ export class ContributionEntity {
     
     public getModifierList(): string[] {
         return this.modifierList.getModifierArray();
+    }
+
+    public getId(): string {
+        return this.id;
     }
     
 }
